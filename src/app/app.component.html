@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.--> 
+<div class="container" style="text-align:center">
+
+  <h1 class="mt-5">
+    Number Translater
+  </h1>
+  <!-- <input [(ngModel)]="number" (keyup)="onKeyup($event)"  type="text" placeholder="Enter your number"> -->
+  <div class="input-group input-group-lg mt-5">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Enter your number :</span>
+    </div>
+    <input [(ngModel)]="number" (keyup)="onKeyup($event)"  type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+  </div>
+
+  <div *ngIf="result" class="card mt-5">
+    <div class="card-body">
+      <h1>{{result}}</h1>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<!-- <app-convert-number-text></app-convert-number-text> -->
